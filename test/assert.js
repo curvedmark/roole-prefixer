@@ -14,7 +14,6 @@ exports.compileTo = function(options, input, css) {
 	ast = prefixer.prefix(ast, options);
 	var output = compiler.compile(ast);
 
-	if (css) css += '\n';
 	if (output === css) return;
 
 	assert.equal(output, css);
